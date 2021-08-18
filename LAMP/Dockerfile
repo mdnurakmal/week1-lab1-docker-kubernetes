@@ -13,5 +13,4 @@ RUN chmod +x ./run.sh
 RUN rc-update add php-fpm7 default
 RUN rc-update add apache2 default
 
-# ENTRYPOINT ["reboot"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["sh","run.sh"]

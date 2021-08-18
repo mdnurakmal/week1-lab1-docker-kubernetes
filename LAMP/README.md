@@ -1,5 +1,10 @@
 # week1-lab1-docker-kubernetes
 Run dockerfile containing LAMP stack
+Tag your image according to your dockerhub repository
 ```shell
-docker build .
+ docker build . -t mdnurakmal:lamp
 ```
+
+
+# References
+https://www.sentiatechblog.com/running-apache-in-a-docker-container

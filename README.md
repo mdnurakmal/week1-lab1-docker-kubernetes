@@ -21,3 +21,7 @@ Refer to readme in LAMP and LEMP folder respectively
 
 # Write docker file for docker-compose LAMP/LEMP
 # By using kubectl command start kubernetes dashboard and deploy some basic services (Any)
+
+
+# Learning Notes
+* unable to run ./script.sh (Check LF line ending for that particular file)

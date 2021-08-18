@@ -2,5 +2,5 @@
 
 # start apache
 echo "Starting httpd"
-httpd
+/usr/sbin/httpd
 echo "Done httpd"

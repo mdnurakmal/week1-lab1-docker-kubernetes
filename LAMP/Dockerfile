@@ -7,7 +7,7 @@ php7 php7-fpm php7-opcache
 
 EXPOSE 80 3306
 
-COPY run.sh /run.sh
-RUN chmod u+x /run.sh
+COPY run.sh ./run.sh
+RUN chmod u+x ./run.sh
 
-# ENTRYPOINT ["./run.sh"]
+ENTRYPOINT ["/usr/sbin/httpd"]

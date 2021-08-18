@@ -28,3 +28,4 @@ Refer to readme in LAMP and LEMP folder respectively
 * Unable to run ./run.sh ? But sh run.sh works
 * If the container is unresponsive do you restart it or you destroy and spawn a new container ?
 * ENTRYPOINT and CMD always run even after restarting container
+* The --no-cache option allows to not cache the index locally, which is useful for keeping containers small.

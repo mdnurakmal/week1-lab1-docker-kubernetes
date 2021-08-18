@@ -16,7 +16,16 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
 # Write docker file for LAMP & LEMP
-Refer to readme in LAMP and LEMP folder respectively
+Run script to build docker image and run LAMP stack containers
+```shell
+. lamp.sh
+```
+
+Run script to build docker image and run LEMP stack containers
+```shell
+. lemp.sh
+```
+
 
 
 # Write docker file for docker-compose LAMP/LEMP
@@ -29,4 +38,4 @@ Refer to readme in LAMP and LEMP folder respectively
 * If the container is unresponsive do you restart it or you destroy and spawn a new container ?
 * ENTRYPOINT and CMD always run even after restarting container
 * The --no-cache option allows to not cache the index locally, which is useful for keeping containers small.
-* 
+*

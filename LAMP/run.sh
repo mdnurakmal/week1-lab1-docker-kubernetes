@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# start apache
-echo "Starting httpd"
-#/usr/sbin/httpd -D FOREGROUND
+#change run level to start apache , php
 openrc default
-echo "Done httpd"
 
+#init mariadb
 /etc/init.d/mariadb setup
 rc-service mariadb start
 
+#secure mariadb
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}'"
+printf "${MYSQL_ROOT_PASSWORD}\n n\n n\n n\n y\n y\n y\n" | mysql_secure_installation
 
+#keep container running
 tail -f /dev/null

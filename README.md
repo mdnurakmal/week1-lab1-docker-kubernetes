@@ -1,5 +1,10 @@
 # week1-lab1-docker-kubernetes
-docker kubernetes
+Lab objectives
+1.	Install Docker
+2.	Install minikube
+3.	Write docker file for LAMP & LEMP
+4.	Write docker file for docker-compose LAMP/LEMP
+5.	By using kubectl command start kubernetes dashboard and deploy some basic services (Any)
 
 # Install Docker
 

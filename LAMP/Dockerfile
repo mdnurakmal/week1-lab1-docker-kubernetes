@@ -12,6 +12,6 @@ COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
 RUN rc-update add php-fpm7 default
 RUN rc-update add apache2 default
-rc-service php-fpm7 restart
-rc-service apache2 restart
+RUN rc-service php-fpm7 restart
+RUN rc-service apache2 restart
 ENTRYPOINT ["sh","run.sh"]

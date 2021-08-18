@@ -25,3 +25,4 @@ Refer to readme in LAMP and LEMP folder respectively
 
 # Learning Notes
 * unable to run ./script.sh (Check LF line ending for that particular file)
+* Unable to run ./run.sh ? But sh run.sh works

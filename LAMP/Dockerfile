@@ -2,9 +2,8 @@ FROM alpine:3.14.1
 
 RUN apk update && apk upgrade
 RUN apk add apache2 apache2-utils \
---no-cache apache2-ssl \
 mariadb mariadb-client \
-php7 php7-fpm php7-opcache \
+php7-apache2\
 --no-cache openrc
 
 EXPOSE 80 3306

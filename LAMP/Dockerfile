@@ -9,5 +9,6 @@ EXPOSE 80
 
 COPY /html /var/www/html
 COPY run.sh run.sh
+RUN chmod u+x run.sh
 
 CMD ./run.sh

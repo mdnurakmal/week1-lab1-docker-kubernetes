@@ -2,5 +2,5 @@
 
 # start apache
 echo "Starting httpd"
-/usr/sbin/httpd -D FOREGROUND
+#/usr/sbin/httpd -D FOREGROUND
 echo "Done httpd"

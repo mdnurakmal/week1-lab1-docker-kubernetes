@@ -8,8 +8,5 @@ apache2 \
 mysql-server \
 php \
 libapache2-mod-php \
-ufw
-
-RUN ufw allow 'Apache Full'
 
 COPY /html /var/www/html

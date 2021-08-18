@@ -1,4 +1,8 @@
 FROM ubuntu:21.10
+
+ENV TZ=Asia/Singapore \
+DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && apt-get install -y \
 apache2 \
 mysql-server \

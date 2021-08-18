@@ -9,4 +9,6 @@ echo "Done httpd"
 /etc/init.d/mariadb setup
 rc-service mariadb start
 
+mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}'"
+
 tail -f /dev/null

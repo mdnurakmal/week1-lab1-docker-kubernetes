@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
 apache2 \
 mysql-server \
 php \
-libapache2-mod-php
+libapache2-mod-php \
+ufw
 
 RUN ufw allow 'Apache Full'
 

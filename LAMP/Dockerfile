@@ -10,6 +10,6 @@ php7-apache2 \
 COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
 RUN rc-update add apache2 default
-
+RUN rc-update add mariadb default
 
 ENTRYPOINT ["sh","run.sh"]

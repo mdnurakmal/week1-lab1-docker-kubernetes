@@ -3,6 +3,7 @@ Run dockerfile containing LAMP stack
 Tag your image according to your dockerhub repository
 ```shell
  docker build . -t mdnurakmal:lamp
+ docker run -it -P mdnurakmal:lamp
 ```
 
 

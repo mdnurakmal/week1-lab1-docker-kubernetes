@@ -1,13 +1,9 @@
-FROM alpine:3.7
+FROM alpine:3.14.1
 
-ENV TZ=Asia/Singapore \
-DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && apt-get install -y \
-apache2 \
-mysql-server \
-php \
-libapache2-mod-php
+RUN apk update && apk upgrade
+RUN apk add apache2 apache2-utils \
+mariadb mariadb-client \
+php7 php7-fpm php7-opcache \
 
 EXPOSE 80
 

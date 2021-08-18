@@ -1,3 +1,6 @@
 #!/bin/bash
 
-/usr/sbin/httpd -D FOREGROUND
+# start apache
+echo "Starting httpd"
+httpd
+echo "Done httpd"

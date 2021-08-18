@@ -14,4 +14,4 @@ RUN rc-update add php-fpm7 default
 RUN rc-update add apache2 default
 RUN rc-service php-fpm7 restart
 RUN rc-service apache2 restart
-ENTRYPOINT ["reboot"]
+# ENTRYPOINT ["reboot"]

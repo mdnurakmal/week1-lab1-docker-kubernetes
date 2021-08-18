@@ -31,11 +31,17 @@ Run script to build docker image and run LEMP stack containers
 . lemp.sh
 ```
 
-
-
 # Write docker file for docker-compose LAMP/LEMP
+
+
 # By using kubectl command start kubernetes dashboard and deploy some basic services (Any)
 
+Install kubectl
+```shell
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+```
 
 # Learning Notes
 * unable to run ./script.sh (Check LF line ending for that particular file)
@@ -43,4 +49,4 @@ Run script to build docker image and run LEMP stack containers
 * If the container is unresponsive do you restart it or you destroy and spawn a new container ?
 * ENTRYPOINT and CMD always run even after restarting container
 * The --no-cache option allows to not cache the index locally, which is useful for keeping containers small.
-*
+* Multi-services in one container vs One service in one container architecture (Dockerfile vs Docker compose)

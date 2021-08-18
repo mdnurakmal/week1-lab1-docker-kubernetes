@@ -9,5 +9,5 @@ EXPOSE 80 3306
 
 COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
-RUN service php7.0-fpm start
+# RUN service php7.0-fpm start
 ENTRYPOINT ["sh","run.sh"]

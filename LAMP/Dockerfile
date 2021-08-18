@@ -11,4 +11,5 @@ EXPOSE 80 3306
 COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
 RUN rc-update add php-fpm7 default
+RUN rc-service php-fpm7 restart
 ENTRYPOINT ["sh","run.sh"]

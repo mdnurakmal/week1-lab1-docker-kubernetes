@@ -3,6 +3,6 @@ RUN apt-get update && apt-get install -y \
 httpd \
 mysql-server \
 php \
-libapache2-mod-php \
+libapache2-mod-php 
 
 COPY /html /var/www/html

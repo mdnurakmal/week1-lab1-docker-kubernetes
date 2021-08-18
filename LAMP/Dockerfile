@@ -11,5 +11,5 @@ COPY run.sh ./run.sh
 RUN chmod +x ./run.sh
 RUN rc-update add apache2 default
 RUN rc-update add mariadb default
-
+RUN /etc/init.d/mariadb setup
 ENTRYPOINT ["sh","run.sh"]

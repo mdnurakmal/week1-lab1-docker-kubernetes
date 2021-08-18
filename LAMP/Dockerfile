@@ -4,7 +4,7 @@ RUN apk update && apk upgrade
 RUN apk add apache2 apache2-utils \
 mariadb mariadb-client \
 php7 php7-fpm php7-opcache \
---no-cache openrc \
+--no-cache openrc 
 
 EXPOSE 80 3306
 

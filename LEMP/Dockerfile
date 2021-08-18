@@ -8,6 +8,7 @@ php7 php7-fpm php7-opcache \
 --no-cache openrc
 
 COPY run.sh ./run.sh
+COPY /configs/default.conf /etc/nginx/http.d/default.conf
 RUN chmod +x ./run.sh
 RUN rc-update add nginx default
 RUN rc-update add php-fpm7 default

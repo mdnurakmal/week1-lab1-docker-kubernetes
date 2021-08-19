@@ -65,3 +65,4 @@ kubectl version --client
 * The --no-cache option allows to not cache the index locally, which is useful for keeping containers small.
 * Multi-services in one container vs One service in one container architecture (Dockerfile vs Docker compose)
 * COPY should almost always be used over ADD
+* Use network alias in dockercompose to resolve container ip from container name

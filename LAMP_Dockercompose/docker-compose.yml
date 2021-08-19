@@ -7,14 +7,16 @@ services:
         volumes:
             - ./html:/usr/local/apache2/htdocs
             - ./conf:/usr/local/apache2/conf
-        environment:
-            - PHPSERVER=php7
-            - MYSQLSERVER=db
+
 
     php7:
         image: php:7-fpm-alpine
         volumes:
             - ./html:/var/www/html
+        networks:
+          default:
+            aliases:
+              - php7
     db:
         image: mariadb
         environment:

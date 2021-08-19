@@ -10,4 +10,4 @@ cd ..
 
 # wait for services to load
 sleep 15
-curl 172.17.0.2/index.php
+curl localhost/index.php

@@ -8,26 +8,13 @@ services:
         volumes:
             - ./html:/usr/local/apache2/htdocs
             - ./conf:/usr/local/apache2/conf
-        depends_on:
-            - php7
-        extra_hosts:
-            - php7:10.5.0.6
-        networks:
-          vpcbr:
-            ipv4_address: 10.5.0.5
-
-
 
     php7:
         hostname: php7
         image: php:7-fpm-alpine
         volumes:
             - ./html:/usr/local/apache2/htdocs
-        networks:
-          vpcbr:
-            ipv4_address: 10.5.0.6
-        expose:
-          - "9000"
+
     db:
         hostname: db
         image: mariadb
@@ -35,9 +22,7 @@ services:
           MYSQL_ROOT_PASSWORD: password
         volumes:
           - ./data_dir:/var/lib/mysql
-        networks:
-          vpcbr:
-            ipv4_address: 10.5.0.7
+
 
     phpmyadmin:
         hostname: phpmyadmin
@@ -47,14 +32,3 @@ services:
           - 3306:80
         environment:
           - PMA_HOST=db
-        networks:
-          vpcbr:
-            ipv4_address: 10.5.0.8
-
-networks:
-  vpcbr:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 10.5.0.0/16
-         gateway: 10.5.0.1

@@ -58,19 +58,28 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
-
 Create kubernetes cluster locally using minikube
+Install socat needed for port forwarding kubernetes dashboard
 ```shell
 sudo apt-get install -y conntrack
+apt-get -y install socat
 minikube start --driver=none
 ```
-Create deployment using kubectl
-Enter the URL of the exposed port to check that nginx server is running
+
+Create nginx deployment using kubectl
+Check nginx is running by going to the url given in the CLI
 ```shell
 cd kubectl
 kubectl apply -f nginx.yaml
 kubectl expose deployment nginx-deployment --type=LoadBalancer --port=80
 minikube service nginx-deployment
+```
+
+Create kubernetes dashboard deployment
+Check dashboard is running by going to https://HOSTIP:10443
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
+kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard 10443:443 --address 0.0.0.0
 ```
 
 Clean up

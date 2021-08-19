@@ -6,7 +6,7 @@ services:
             - "80:80"
         volumes:
             - ./html:/usr/local/apache2/htdocs
-            - ./extra:/usr/local/apache2/conf/extra
+            - ./conf:/usr/local/apache2/conf
 
     php7:
         image: php:7-fpm-alpine

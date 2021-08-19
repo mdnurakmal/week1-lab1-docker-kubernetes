@@ -12,3 +12,4 @@ docker-compose up -d
 * Check mariadb is running by going to localhost:3306 , Login Username : root , Password: password
 
 # References
+* command to restart apache "apachectl -k graceful"

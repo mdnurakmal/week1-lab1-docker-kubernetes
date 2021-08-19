@@ -57,6 +57,27 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
+Create kubernetes cluster locally using minikube
+```shell
+sudo apt-get install -y conntrack
+minikube start --driver=none
+```
+Create deployment using kubectl
+Enter the URL of the exposed port to check that nginx server is running
+```shell
+cd kubectl
+kubectl apply -f nginx.yaml
+kubectl expose deployment nginx-deployment --type=LoadBalancer --port=80
+minikube service nginx-deployment
+```
+
+Clean up
+```shell
+kubectl delete deployment  nginx-deployment
+kubectl delete service  nginx-deployment
+minikube delete
+```
+
 # Learning Notes
 * unable to run ./script.sh (Check LF line ending for that particular file)
 * Unable to run ./run.sh ? But sh run.sh works

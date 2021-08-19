@@ -7,16 +7,14 @@ services:
         volumes:
             - ./html:/usr/local/apache2/htdocs
             - ./conf:/usr/local/apache2/conf
+        extra_hosts:
+            - php7:php7
 
 
     php7:
         image: php:7-fpm-alpine
         volumes:
             - ./html:/var/www/html
-        networks:
-          default:
-            aliases:
-              - php7
     db:
         image: mariadb
         environment:

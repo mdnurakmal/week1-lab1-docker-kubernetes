@@ -7,9 +7,9 @@ Tag your image according to your dockerhub repository
 docker build . -t mdnurakmal:lamp
 docker run -d -t -v $(pwd)/html:/var/www/localhost/htdocs/ -p 80:80/tcp --name lamp -e MYSQL_ROOT_PASSWORD=password mdnurakmal:lamp
 ```
-* Check apache2 is running by going to <HOSTIP>/index.html
-* Check php is running by going to <HOSTIP>/index.php
-* Check phpmyadmin/mariadb is running by going to <HOSTIP>/phpmyadmin , Login Username : root , Password: password
+* Check apache2 is running by going to HOSTIP/index.html
+* Check php is running by going to HOSTIP/index.php
+* Check phpmyadmin/mariadb is running by going to HOSTIP/phpmyadmin , Login Username : root , Password: password
 
 ```
 

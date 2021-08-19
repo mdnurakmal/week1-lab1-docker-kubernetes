@@ -7,9 +7,9 @@ Tag your image according to your dockerhub repository
 docker-compose up -d
 ```
 
-* Check apache2 is running by going to <HOSTIP>/index.html
-* Check php is running by going to <HOSTIP>/index.php
-* Check phpmyadmin/mariadb is running by going to <HOSTIP>:3306 , Login Username : root , Password: password
+* Check apache2 is running by going to HOSTIP/index.html
+* Check php is running by going to HOSTIP/index.php
+* Check phpmyadmin/mariadb is running by going to HOSTIP:3306 , Login Username : root , Password: password
 
 # References
 * command to restart apache "apachectl -k graceful"

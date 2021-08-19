@@ -1,0 +1,20 @@
+version: '2'
+services:
+    web:
+        image: nginx:alpine
+        ports:
+            - "8080:80"
+        volumes:
+            - ./html:/var/www/html
+            - ./configs/site.conf:/etc/nginx/conf.d/site.conf
+
+    php7:
+        image: php:7-fpm-alpine
+        volumes:
+            - ./html:/var/www/html
+    db:
+        image: mariadb
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+        volumes:
+          - ./data_dir:/var/lib/mysql

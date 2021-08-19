@@ -21,18 +21,26 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
 # Write docker file for LAMP & LEMP
-Run script to build docker image and run LAMP stack containers
+Run script to build docker image and run LAMP  stack with only 1 container
 ```shell
-. lamp.sh
+. lamp_dockerfile.sh
 ```
 
-Run script to build docker image and run LEMP stack containers
+Run script to build docker image and run LEMP stack with only 1 container
 ```shell
-. lemp.sh
+. lemp_dockerfile.sh
 ```
 
 # Write docker file for docker-compose LAMP/LEMP
+Run script to build docker image and run LAMP stack with multiple containers using docker swarm
+```shell
+. lamp_dockercompose.sh
+```
 
+Run script to build docker image and run LEMP stack  with multiple containers using docker swarm
+```shell
+. lemp_dockercomposesh
+```
 
 # By using kubectl command start kubernetes dashboard and deploy some basic services (Any)
 

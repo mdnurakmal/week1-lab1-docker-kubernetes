@@ -5,6 +5,7 @@ RUN apk update && apk upgrade
 RUN apk add apache2 apache2-utils \
 mariadb mariadb-client \
 php7-apache2 \
+phpmyadmin \
 --no-cache openrc
 
 COPY run.sh ./run.sh

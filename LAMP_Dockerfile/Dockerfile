@@ -4,7 +4,7 @@ RUN apk update && apk upgrade
 
 RUN apk add apache2 apache2-utils \
 mariadb mariadb-client \
-php7-apache2 \
+php7-apache2 php7-iconv php7-xml \
 phpmyadmin \
 --no-cache openrc
 

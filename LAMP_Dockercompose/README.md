@@ -7,4 +7,8 @@ Tag your image according to your dockerhub repository
 docker-compose up -d
 ```
 
+* Check nginx is running by going to localhost/index.html
+* Check php is running by going to localhost/index.php
+* Check mariadb is running by going to localhost:3306 , Login Username : root , Password: password
+
 # References

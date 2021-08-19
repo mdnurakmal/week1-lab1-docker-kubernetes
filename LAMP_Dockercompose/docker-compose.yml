@@ -1,12 +1,12 @@
 version: '2'
 services:
     web:
-        image: nginx:alpine
+        image: httpd:alpine
         ports:
             - "80:80"
         volumes:
-            - ./html:/var/www/html
-            - ./configs/:/etc/nginx/conf.d/
+            - ./html:/usr/local/apache2/htdocs
+            - ./httpd-vhosts.conf:/usr/local/apache2/conf/extra
 
     php7:
         image: php:7-fpm-alpine

@@ -35,8 +35,9 @@ Run script to build docker image and run LEMP stack with only 1 container
 
 Install docker compose
 ```shell
-apt install docker-compose 
+apt install docker-compose
 ```
+
 Run script to build docker image and run LAMP stack with multiple containers using docker swarm
 ```shell
 . lamp_dockercompose.sh
@@ -63,3 +64,4 @@ kubectl version --client
 * ENTRYPOINT and CMD always run even after restarting container
 * The --no-cache option allows to not cache the index locally, which is useful for keeping containers small.
 * Multi-services in one container vs One service in one container architecture (Dockerfile vs Docker compose)
+* COPY should almost always be used over ADD

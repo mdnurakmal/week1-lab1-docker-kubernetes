@@ -18,5 +18,6 @@ rm phpMyAdmin-5.0.2-all-languages.tar.gz
 mv phpMyAdmin-5.0.2-all-languages phpmyadmin
 ln -s /usr/share/webapps/phpmyadmin/ /var/www/html/phpmyadmin
 
+echo phpmyadmin downloaded
 #keep container running
 tail -f /dev/null

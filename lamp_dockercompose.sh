@@ -9,5 +9,5 @@ docker-compose up -d
 cd ..
 
 # wait for services to load
-sleep 15
+sleep 5
 curl localhost/index.php

@@ -11,5 +11,5 @@ docker run -d -t -v $(pwd)/html:/var/www/localhost/htdocs/ -p 80:80/tcp --name l
 cd ..
 
 # wait for services to load
-sleep 15
+sleep 5
 curl 172.17.0.2/index.php

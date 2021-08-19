@@ -1,0 +1,28 @@
+version: '2'
+services:
+    web:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+        volumes:
+            - ./html:/var/www/html
+            - ./configs/:/etc/nginx/conf.d/
+
+    php7:
+        image: php:7-fpm-alpine
+        volumes:
+            - ./html:/var/www/html
+    db:
+        image: mariadb
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+        volumes:
+          - ./data_dir:/var/lib/mysql
+
+    phpmyadmin:
+      image: phpmyadmin
+      restart: always
+      ports:
+        - 3306:80
+      environment:
+        - PMA_HOST=db

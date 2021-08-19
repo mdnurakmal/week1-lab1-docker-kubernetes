@@ -6,7 +6,7 @@ services:
             - "80:80"
         volumes:
             - ./html:/var/www/html
-            - ./configs/site.conf:/etc/nginx/conf.d/site.conf
+
         links:
             - php7
 

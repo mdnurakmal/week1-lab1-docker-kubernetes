@@ -7,8 +7,6 @@ services:
         volumes:
             - ./html:/usr/local/apache2/htdocs
             - ./conf:/usr/local/apache2/conf
-        extra_hosts:
-            - php7:php7
 
 
     php7:

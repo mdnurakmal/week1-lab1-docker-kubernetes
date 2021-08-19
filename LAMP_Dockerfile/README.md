@@ -1,4 +1,4 @@
-# week1-lab1-docker-kubernetes
+# LAMP Stack using Dockerfile
 
 Run dockerfile containing LAMP stack </br>
 Tag your image according to your dockerhub repository

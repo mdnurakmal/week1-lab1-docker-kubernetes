@@ -66,3 +66,4 @@ kubectl version --client
 * Multi-services in one container vs One service in one container architecture (Dockerfile vs Docker compose)
 * COPY should almost always be used over ADD
 * Use network alias in dockercompose to resolve container ip from container name
+* You do not send the code over to the FPM machine, so you have to deploy the code there to. It has to be in the same directory as it is on the host. 

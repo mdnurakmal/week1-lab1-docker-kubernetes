@@ -23,7 +23,6 @@ services:
         volumes:
           - ./data_dir:/var/lib/mysql
 
-
     phpmyadmin:
         hostname: phpmyadmin
         image: phpmyadmin

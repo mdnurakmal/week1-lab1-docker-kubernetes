@@ -1,4 +1,4 @@
-# week1-lab1-docker-kubernetes
+# LEMP Stack using Dockerfile
 
 Run dockerfile containing LEMP stack </br>
 Tag your image according to your dockerhub repository

@@ -5,7 +5,7 @@ docker rm lemp
 docker container prune -f
 
 # go to LAMP directory and build docker image
-cd LEMP
+cd LEMP_Dockerfile
 docker build . -t mdnurakmal:lemp
 docker run -d -t -v $(pwd)/html:/var/www/html -p 80:80/tcp --name lemp -e MYSQL_ROOT_PASSWORD=password mdnurakmal:lemp
 cd ..

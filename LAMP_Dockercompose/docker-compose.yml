@@ -3,7 +3,7 @@ services:
     web:
         image: nginx:alpine
         ports:
-            - "8080:80"
+            - "80:80"
         volumes:
             - ./html:/var/www/html
             - ./configs/site.conf:/etc/nginx/conf.d/site.conf

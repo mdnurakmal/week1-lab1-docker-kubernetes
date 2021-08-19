@@ -6,6 +6,7 @@ cd LAMP_Dockercompose
 docker-compose down
 docker-compose up -d
 
+cd ..
 
 # wait for services to load
 sleep 15

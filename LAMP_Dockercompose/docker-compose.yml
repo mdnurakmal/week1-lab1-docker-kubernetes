@@ -22,7 +22,7 @@ services:
         hostname: php7
         image: php:7-fpm-alpine
         volumes:
-            - ./html:/var/www/html
+            - ./html:/usr/local/apache2/htdocs
         networks:
           vpcbr:
             ipv4_address: 10.5.0.6

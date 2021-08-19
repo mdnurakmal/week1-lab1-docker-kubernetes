@@ -32,6 +32,11 @@ Run script to build docker image and run LEMP stack with only 1 container
 ```
 
 # Write docker file for docker-compose LAMP/LEMP
+
+Install docker compose
+```shell
+apt install docker-compose 
+```
 Run script to build docker image and run LAMP stack with multiple containers using docker swarm
 ```shell
 . lamp_dockercompose.sh

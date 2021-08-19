@@ -4,7 +4,7 @@ RUN apk update && apk upgrade
 
 RUN apk add nginx \
 mariadb mariadb-client \
-php7 php7-fpm php7-opcache \
+php7 php7-fpm php7-opcache php7-mbstring php7-gettext \
 --no-cache openrc
 
 COPY run.sh ./run.sh

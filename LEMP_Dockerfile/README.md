@@ -7,9 +7,8 @@ Tag your image according to your dockerhub repository
 docker build . -t mdnurakmal:lemp
 docker run -d -t -v $(pwd)/html:/var/www/html -p 80:80/tcp --name lemp -e MYSQL_ROOT_PASSWORD=password mdnurakmal:lemp
 ```
-Access the newly created container
-```shell
-docker exec -it lamp /bin/sh
-```
+* Check nginx is running by going to <HOSTIP>/index.html
+* Check php is running by going to <HOSTIP>/index.php
+* Check phpmyadmin/mariadb is running by going to <HOSTIP>/phpmyadmin , Login Username : root , Password: password
 
 # References

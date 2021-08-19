@@ -12,6 +12,9 @@ services:
             - php7
         extra_hosts:
             - php7:10.5.0.6
+        networks:
+          vpcbr:
+            ipv4_address: 10.5.0.5
 
 
 
@@ -21,7 +24,7 @@ services:
         volumes:
             - ./html:/var/www/html
         networks:
-          default:
+          vpcbr:
             ipv4_address: 10.5.0.6
     db:
         hostname: db
@@ -30,6 +33,9 @@ services:
           MYSQL_ROOT_PASSWORD: password
         volumes:
           - ./data_dir:/var/lib/mysql
+        networks:
+          vpcbr:
+            ipv4_address: 10.5.0.7
 
     phpmyadmin:
         hostname: phpmyadmin
@@ -39,3 +45,14 @@ services:
           - 3306:80
         environment:
           - PMA_HOST=db
+        networks:
+          vpcbr:
+            ipv4_address: 10.5.0.8
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1

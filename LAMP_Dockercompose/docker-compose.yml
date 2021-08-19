@@ -10,6 +10,8 @@ services:
             - ./conf:/usr/local/apache2/conf
         depends_on:
             - php7
+        extra_hosts:
+            - php7:php7
 
 
     php7:

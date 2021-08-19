@@ -7,6 +7,8 @@ services:
         volumes:
             - ./html:/var/www/html
             - ./configs/site.conf:/etc/nginx/conf.d/site.conf
+        links:
+            - php7
 
     php7:
         image: php:7-fpm-alpine

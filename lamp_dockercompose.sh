@@ -2,7 +2,7 @@
 # go to LAMP directory and run docker compose
 cd LAMP_Dockercompose
 
-# destroy previously created docker swarm
+# destroy existing containers and rebuild a new one
 docker-compose down
 docker-compose up -d
 

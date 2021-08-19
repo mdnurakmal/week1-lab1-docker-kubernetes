@@ -6,7 +6,7 @@ Lab objectives
 4.	Write docker file for docker-compose LAMP/LEMP
 5.	By using kubectl command start kubernetes dashboard and deploy some basic services (Any)
 
-Lab works was done and tested in ubuntu VM running from DigitalOcean droplet
+Lab works were done and tested in ubuntu VM running from DigitalOcean droplet
 
 # Install Docker
 
